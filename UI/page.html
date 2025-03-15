@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderation Options</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(20, 30, 48, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 15px 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00c6ff;
+        }
+
+        /* Header */
+        header {
+            padding: 100px 20px;
+            margin-top: 60px;
+            animation: slideIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 1.3em;
+        }
+
+        /* Moderation Options */
+        .moderation-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .option {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            width: 40%;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 198, 255, 0.2);
+        }
+        .option:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 198, 255, 0.3);
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            font-size: 1.3em;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 198, 255, 0.7);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Select Your Moderation Type</h1>
+        <p>Choose between text and image moderation.</p>
+    </header>
+
+    <section class="moderation-options" id="options">
+        <div class="option">
+            <h2>🔍 Text Moderation</h2>
+            <p>Detect and filter offensive or harmful text in real time.</p>
+            <a href="text.html" class="btn">Try Text Moderation</a>
+        </div>
+        <div class="option">
+            <h2>🖼️ Image Moderation</h2>
+            <p>Analyze and classify images to ensure content safety.</p>
+            <a href="qimage.html" class="btn">Try Image Moderation</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 AI Moderation System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
